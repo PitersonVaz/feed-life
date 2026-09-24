@@ -144,8 +144,10 @@ nav > ul > li > a[href="cadastro.html"]:hover {background-color: var(--cor-botao
 }
 
 /* Botão menu p/ celular */
-
-#menu-toggle {display: none;
+#menu-toggle {position: absolute;
+    opacity: 0;
+    width: 1px;
+    height: 1px;
 }
 
 nav label {display: none;
