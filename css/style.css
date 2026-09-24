@@ -1,7 +1,4 @@
-
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap");
-
-/* CORES, FONTES E ESPAÇAMENTOS */
 
 :root {
     --cor-primaria: #166534;
@@ -10,7 +7,7 @@
     --cor-destaque: #f97316;
     --cor-botao: #c2410c;
     --cor-botao-hover: #9a3412;
-    --cor-fundo: #f8fafc;                                   /* CORES */      
+    --cor-fundo: #f8fafc;                                  /* CORES */
     --cor-suave: #f0fdf4;
     --cor-kraft: #ecdcc0;
     --cor-kraft-borda: #b98f57;
@@ -20,19 +17,18 @@
 
     --fonte-pequena: 0.875rem;
     --fonte-normal: 1rem;
-    --fonte-media: 1.25rem;                                   /* FONTES */
+    --fonte-media: 1.25rem;                                /* FONTES */
     --fonte-grande: 1.75rem;
     --fonte-titulo: 2.75rem;
 
     --espaco-pequeno: 0.5rem;
     --espaco-normal: 1rem;
-    --espaco-medio: 1.5rem;                                   /* ESPAÇAMENTOS */
+    --espaco-medio: 1.5rem;                                /* ESPAÇAMENTOS */
     --espaco-grande: 2rem;
     --espaco-extra: 3.5rem;
 
-    --lateral: max(1.25rem, calc((100% - 1100px) / 2));       /* Faixas ocupam a tela toda, mas o conteúdo fica alinhado */
+    --lateral: max(1.25rem, calc((100% - 1100px) / 2));    /* Faixas ocupam a tela toda, mas o conteúdo fica alinhado */
 }
-
 
 /* BASE */
 * {box-sizing: border-box;
@@ -72,6 +68,29 @@ a {color: var(--cor-primaria);
     outline-offset: 2px;
 }
 
+/* pular menu */
+.pular-conteudo {position: absolute;
+    left: -9999px;
+    top: 8px;
+    padding: 6px 12px;
+    background-color: var(--cor-botao);
+    color: var(--cor-branca);
+    text-decoration: none;
+    font-size: var(--fonte-pequena);
+    font-weight: 700;
+    border-radius: 999px;
+    z-index: 1000;
+}
+
+.pular-conteudo:focus {
+    left: 10px;
+}
+
+.pular-conteudo:hover {
+    background-color: var(--cor-botao-hover);
+    color: var(--cor-branca);
+}
+
 /* CABEÇALHO E NAVEGAÇÃO */
 header {display: flex;
     align-items: center;
@@ -91,7 +110,7 @@ header {display: flex;
     width: auto;
 }
 
-/*Em cadastro e projetos o logo fica antes do título */
+/*logo fica antes do título */
 header h1 {display: flex;
     align-items: center;
     gap: 0.6rem;
@@ -163,9 +182,7 @@ nav label span {width: 26px;
     border-radius: 2px;
 }
 
-
 /* Submenu */
-
 .tem-submenu {position: relative;
 }
 
@@ -205,9 +222,7 @@ nav label span {width: 26px;
     color: var(--cor-primaria);
 }
 
-
 /*Seções */
-
 main {min-height: 60vh;
 }
 
@@ -221,7 +236,7 @@ main section {padding: var(--espaco-extra) var(--lateral);
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
     gap: var(--espaco-grande);
 }
- 
+
 .lista-projetos article {padding-left: var(--espaco-medio);
     border-left: 5px solid var(--cor-primaria);
 }
@@ -242,14 +257,12 @@ main section {padding: var(--espaco-extra) var(--lateral);
 }
 
 /*página projetos.html */
-main section > article { margin-top: var(--espaco-medio);
+main section > article {margin-top: var(--espaco-medio);
     padding-left: var(--espaco-medio);
     border-left: 5px solid var(--cor-secundaria);
 }
 
-
 /*APRESENTAÇÃO PRINCIPAL*/
-
 main section.hero {padding-top: var(--espaco-grande);
     padding-bottom: var(--espaco-extra);
 }
@@ -314,7 +327,6 @@ main section.hero {padding-top: var(--espaco-grande);
     color: var(--cor-branca);
 }
 
-
 /* VOLUNTARIADO */
 #voluntariado {background-color: var(--cor-suave);
 }
@@ -329,7 +341,6 @@ main section.hero {padding-top: var(--espaco-grande);
     border-radius: 20px;
 }
 
-
 /*Ctt e rodapé*/
 #contatos {background-color: var(--cor-escura);
     color: #d1fae5;
@@ -340,7 +351,7 @@ main section.hero {padding-top: var(--espaco-grande);
 }
 
 #contatos p {
-margin-bottom: var(--espaco-pequeno);
+    margin-bottom: var(--espaco-pequeno);
 }
 
 footer {padding: var(--espaco-medio) var(--lateral);
@@ -353,11 +364,11 @@ footer p {max-width: none;
     margin: 0;
 }
 
-
 /*Telas pequenas*/
-
-@media (max-width: 767px) {.logo {height: 52px;
+@media (max-width: 767px) {
+    .logo {height: 52px;
     }
+
     nav label {display: flex;
     }
 
@@ -404,17 +415,17 @@ footer p {max-width: none;
     }
 }
 
-@media (min-width: 768px) {.voluntariado-grid {grid-template-columns: 1.1fr 0.9fr;
+@media (min-width: 768px) {
+    .voluntariado-grid {grid-template-columns: 1.1fr 0.9fr;
     }
 }
 
-@media (prefers-reduced-motion: reduce) {.hero-conteudo {animation: none;
+@media (prefers-reduced-motion: reduce) {
+    .hero-conteudo {animation: none;
     }
 }
 
-
-/*FORMULÁRIo*/
-
+/*FORMULÁRIO*/
 form {display: flex;
     flex-direction: column;
     gap: var(--espaco-medio);
@@ -485,9 +496,7 @@ select:user-invalid {border-color: var(--cor-botao);
     color: var(--cor-primaria);
 }
 
-
 /* Botão do formulário (Principal)*/
-
 #form-cadastro button[type="submit"] {width: 100%;
     padding: 14px var(--espaco-normal);
     background-color: var(--cor-primaria);
