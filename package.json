@@ -1,0 +1,27 @@
+{
+  "name": "t1-feed-life",
+  "version": "1.0.0",
+  "description": "A FEED LIFE é um projeto social criado com o objetivo de combater a fome e apoiar pessoas e famílias em situação de vulnerabilidade.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PitersonVaz/feed-life.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/PitersonVaz/feed-life/issues"
+  },
+  "homepage": "https://github.com/PitersonVaz/feed-life#readme",
+  "devDependencies": {
+    "clean-css-cli": "^5.6.3",
+    "server": "^1.0.42",
+    "sharp-cli": "^6.1.0",
+    "terser": "^5.51.2"
+  }
+}
