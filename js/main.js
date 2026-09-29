@@ -82,3 +82,16 @@ linksNavegacao.forEach(function (link) {
     });
 
 });
+
+// alto contraste
+const botaoContraste = document.querySelector("#alto-contraste");
+
+if (botaoContraste) {
+    botaoContraste.addEventListener("click", function () {
+        document.body.classList.toggle("alto-contraste");
+
+        const contrasteAtivo = document.body.classList.contains("alto-contraste");
+
+        botaoContraste.setAttribute("aria-pressed", contrasteAtivo);
+    });
+}
