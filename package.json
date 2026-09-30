@@ -4,7 +4,7 @@
   "description": "A FEED LIFE é um projeto social criado com o objetivo de combater a fome e apoiar pessoas e famílias em situação de vulnerabilidade.",
   "scripts": {
     "dev": "vite html",
-    "build": "vite build html",
+    "build": "vite build",
     "preview": "vite preview"
   },
   "repository": {
